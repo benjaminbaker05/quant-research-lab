@@ -125,3 +125,18 @@ The backtest results are therefore more important than raw accuracy.
 - Compare ML signals against Week 5 baseline strategies.
 - Add transaction cost sensitivity plots.
 - Move toward intraday or order-book data.
+
+## Comparison Against Week 5 Baselines
+
+The ML signals should be compared against the simple baseline strategies from Week 5, especially the long-only benchmark and moving-average strategies.
+
+A model is only interesting if it improves the overall research picture after considering:
+
+- transaction costs
+- turnover
+- drawdown
+- Sharpe ratio
+- robustness across cost assumptions
+- simplicity compared with baseline strategies
+
+If an ML model performs similarly to or worse than a simple baseline, the baseline should be preferred until more evidence is available.
