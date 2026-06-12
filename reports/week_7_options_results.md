@@ -100,3 +100,13 @@ The delta hedging experiment shows that hedged option P&L depends on the relatio
 - Add volatility surface examples.
 - Compare Black-Scholes implied volatility across strikes.
 - Connect options module to backtesting/risk framework.
+
+## Manual Interpretation Notes
+
+The most important lesson from this module is that options are not simple directional bets.
+
+A call option's value depends on the underlying price, volatility, time to expiry, interest rates, and convexity.
+
+Delta hedging reduces first-order directional exposure, but it does not eliminate risk. The hedger remains exposed to realised volatility, discrete rebalancing error, gamma, transaction costs, and model assumptions.
+
+This module should therefore be interpreted as a mathematical finance demonstration rather than a production-ready options pricing library.
