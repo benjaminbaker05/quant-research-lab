@@ -30,3 +30,7 @@ Research project looking at short-horizon prediction, market microstructure, mar
 6. C++ limit order book
 7. Options/volatility module
 8. Final research report
+
+## Project Roadmap
+
+See [`docs/project_plan.md`](docs/project_plan.md) for the full research and engineering plan.
