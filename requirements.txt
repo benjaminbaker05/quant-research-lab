@@ -1,0 +1,9 @@
+numpy
+pandas
+scipy
+matplotlib
+jupyter
+pytest
+ruff
+scikit-learn
+yfinance
