@@ -6,3 +6,8 @@ data/processed/
 *.parquet
 *.csv
 .DS_Store
+cpp/build/
+*.exe
+*.obj
+*.pdb
+*.ilk
