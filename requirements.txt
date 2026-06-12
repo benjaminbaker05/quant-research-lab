@@ -1,9 +1,10 @@
 numpy
 pandas
-scipy
-matplotlib
-jupyter
-pytest
-ruff
+polars
 scikit-learn
+matplotlib
 yfinance
+duckdb
+pyarrow
+pytest
+jupyter
