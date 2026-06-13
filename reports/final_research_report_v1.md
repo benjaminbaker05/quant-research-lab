@@ -1,6 +1,23 @@
 \# A Reproducible Python/C++ Research Pipeline for Financial Time-Series Modelling, Backtesting, and Market Microstructure Simulation
 
+## Executive Summary
 
+This project is a reproducible Python/C++ quantitative research framework.
+
+It combines:
+
+- Python data ingestion and feature engineering
+- baseline and machine learning models
+- walk-forward validation for time-series data
+- transaction-cost-aware backtesting
+- probability and market-making simulations
+- a C++ limit-order-book engine
+- Black-Scholes pricing, Greeks, implied volatility, and delta hedging
+- pytest coverage and written research reports
+
+The main purpose is to demonstrate rigorous quantitative research process rather than claim a production-ready trading strategy.
+
+The project shows that robust quant research requires more than prediction accuracy. It requires careful validation, cost modelling, risk metrics, baselines, and clear communication of limitations.
 
 \## Abstract
 
@@ -567,6 +584,20 @@ Improve C++ cancellation performance using an order-location map.
 Add option hedging transaction costs.
 
 Produce a polished PDF research report.
+
+## Reproducibility
+
+To reproduce the main Python results:
+
+```powershell
+python -m src.data.download
+python -m src.data.clean
+python -m src.features.build_features
+python -m src.backtest.run_backtests
+python -m src.models.run_ml_experiment
+python -m src.options.run_options_experiment
+python -m src.reporting.generate_report_assets
+pytest
 
 
 
