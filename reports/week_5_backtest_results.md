@@ -8,7 +8,7 @@ The objective of this week was to build a simple vectorised backtesting engine a
 
 Feature file used:
 
-`data\processed\features_features_SPY_1d_2020-01-01_2025-01-01.parquet`
+`data\processed\features_features_features_features_SPY_1d_2020-01-01_2025-01-01.parquet`
 
 The strategy signals use the feature dataset created in Week 2.
 
@@ -36,21 +36,21 @@ Costs are charged on turnover:
 
 | strategy | cost_bps | cumulative_return | annualised_return | annualised_volatility | sharpe_ratio | max_drawdown | hit_rate | average_turnover |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| signal_long_only | 0.0 | 1.0527 | 0.1607 | 0.2096 | 0.7666 | -0.2832 | 0.5485 | 0.0008 |
-| signal_trend_ma_20 | 0.0 | 0.2278 | 0.0434 | 0.2099 | 0.207 | -0.2422 | 0.5387 | 0.185 |
-| signal_mean_reversion_ma_20 | 0.0 | -0.1083 | -0.0235 | 0.1869 | -0.1256 | -0.2832 | 0.352 | 0.2204 |
-| signal_volatility_breakout | 0.0 | -0.2218 | -0.0506 | 0.1354 | -0.374 | -0.4012 | 0.1694 | 0.5452 |
-| signal_short_term_reversal | 0.0 | 0.4449 | 0.0793 | 0.2097 | 0.378 | -0.2489 | 0.5016 | 1.0074 |
-| signal_long_only | 1.0 | 1.0524 | 0.1607 | 0.2096 | 0.7665 | -0.2832 | 0.5485 | 0.0008 |
-| signal_trend_ma_20 | 1.0 | 0.2005 | 0.0386 | 0.2099 | 0.1839 | -0.2466 | 0.5378 | 0.185 |
-| signal_mean_reversion_ma_20 | 1.0 | -0.1319 | -0.0289 | 0.1869 | -0.1545 | -0.2832 | 0.3503 | 0.2204 |
-| signal_volatility_breakout | 1.0 | -0.2717 | -0.0636 | 0.1354 | -0.4697 | -0.4149 | 0.1686 | 0.5452 |
-| signal_short_term_reversal | 1.0 | 0.2783 | 0.0522 | 0.2097 | 0.249 | -0.2723 | 0.4975 | 1.0074 |
-| signal_long_only | 5.0 | 1.0516 | 0.1606 | 0.2097 | 0.7659 | -0.2832 | 0.5485 | 0.0008 |
-| signal_trend_ma_20 | 5.0 | 0.0972 | 0.0194 | 0.2098 | 0.0925 | -0.2779 | 0.5329 | 0.185 |
-| signal_mean_reversion_ma_20 | 5.0 | -0.2201 | -0.0502 | 0.187 | -0.2686 | -0.2922 | 0.347 | 0.2204 |
-| signal_volatility_breakout | 5.0 | -0.4415 | -0.1137 | 0.1356 | -0.8387 | -0.4824 | 0.1628 | 0.5452 |
-| signal_short_term_reversal | 5.0 | -0.217 | -0.0494 | 0.2099 | -0.2356 | -0.5043 | 0.4729 | 1.0074 |
+| signal_long_only | 0.0 | 1.2567 | 0.1909 | 0.1691 | 1.1291 | -0.245 | 0.5511 | 0.0009 |
+| signal_trend_ma_20 | 0.0 | 0.0545 | 0.0115 | 0.1695 | 0.0676 | -0.2422 | 0.5375 | 0.1882 |
+| signal_mean_reversion_ma_20 | 0.0 | 0.0407 | 0.0086 | 0.1409 | 0.061 | -0.1963 | 0.3501 | 0.2232 |
+| signal_volatility_breakout | 0.0 | 0.1455 | 0.0296 | 0.0984 | 0.3007 | -0.1388 | 0.1712 | 0.5426 |
+| signal_short_term_reversal | 0.0 | -0.078 | -0.0173 | 0.1693 | -0.102 | -0.2489 | 0.4957 | 0.9957 |
+| signal_long_only | 1.0 | 1.2565 | 0.1909 | 0.1691 | 1.1289 | -0.245 | 0.5511 | 0.0009 |
+| signal_trend_ma_20 | 1.0 | 0.0315 | 0.0067 | 0.1695 | 0.0394 | -0.2466 | 0.5366 | 0.1882 |
+| signal_mean_reversion_ma_20 | 1.0 | 0.0137 | 0.0029 | 0.1409 | 0.0208 | -0.2062 | 0.3484 | 0.2232 |
+| signal_volatility_breakout | 1.0 | 0.0749 | 0.0156 | 0.0984 | 0.1587 | -0.1561 | 0.1704 | 0.5426 |
+| signal_short_term_reversal | 1.0 | -0.1797 | -0.0416 | 0.1693 | -0.2459 | -0.2714 | 0.4923 | 0.9957 |
+| signal_long_only | 5.0 | 1.2556 | 0.1908 | 0.1691 | 1.1284 | -0.245 | 0.5511 | 0.0009 |
+| signal_trend_ma_20 | 5.0 | -0.0558 | -0.0122 | 0.1694 | -0.0722 | -0.2779 | 0.5315 | 0.1882 |
+| signal_mean_reversion_ma_20 | 5.0 | -0.0872 | -0.0194 | 0.141 | -0.1375 | -0.2447 | 0.345 | 0.2232 |
+| signal_volatility_breakout | 5.0 | -0.1669 | -0.0384 | 0.0984 | -0.3907 | -0.2447 | 0.1644 | 0.5426 |
+| signal_short_term_reversal | 5.0 | -0.4863 | -0.1332 | 0.1696 | -0.7855 | -0.5033 | 0.4668 | 0.9957 |
 
 ## Equity Curves
 

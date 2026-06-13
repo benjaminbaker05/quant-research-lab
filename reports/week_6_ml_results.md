@@ -10,7 +10,7 @@ The focus was not to maximise performance, but to evaluate simple ML models prop
 
 Feature file used:
 
-`data\processed\features_features_features_SPY_1d_2020-01-01_2025-01-01.parquet`
+`data\processed\features_features_features_features_SPY_1d_2020-01-01_2025-01-01.parquet`
 
 The feature dataset was created from the Week 2 data pipeline.
 
@@ -56,9 +56,9 @@ This avoids random train/test splitting, which would leak future information in 
 
 | model | accuracy | precision | recall | f1 | roc_auc | n_predictions |
 | --- | --- | --- | --- | --- | --- | --- |
-| logistic_regression | 0.5338 | 0.5372 | 0.9652 | 0.6902 | 0.4666 | 695 |
-| random_forest | 0.5281 | 0.5381 | 0.869 | 0.6646 | 0.4894 | 695 |
-| hist_gradient_boosting | 0.4993 | 0.5275 | 0.6658 | 0.5887 | 0.4835 | 695 |
+| logistic_regression | 0.546 | 0.5457 | 0.9505 | 0.6934 | 0.4755 | 674 |
+| random_forest | 0.5163 | 0.5335 | 0.8324 | 0.6502 | 0.4769 | 674 |
+| hist_gradient_boosting | 0.4926 | 0.5233 | 0.6786 | 0.5909 | 0.4711 | 674 |
 
 ## ML Signal Construction
 
@@ -74,15 +74,15 @@ The neutral zone avoids trading on weak model confidence.
 
 | model | cost_bps | cumulative_return | annualised_return | annualised_volatility | sharpe_ratio | max_drawdown | hit_rate | average_turnover |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| hist_gradient_boosting | 0.0 | -0.1229 | -0.0464 | 0.1589 | -0.2922 | -0.312 | 0.436 | 0.7928 |
-| hist_gradient_boosting | 1.0 | -0.1699 | -0.0653 | 0.1589 | -0.4109 | -0.3226 | 0.4317 | 0.7928 |
-| hist_gradient_boosting | 5.0 | -0.3343 | -0.1372 | 0.1593 | -0.8613 | -0.3869 | 0.4216 | 0.7928 |
-| logistic_regression | 0.0 | 0.1286 | 0.0448 | 0.1541 | 0.2908 | -0.1868 | 0.423 | 0.2173 |
-| logistic_regression | 1.0 | 0.1116 | 0.0391 | 0.1541 | 0.2538 | -0.1875 | 0.4216 | 0.2173 |
-| logistic_regression | 5.0 | 0.0465 | 0.0166 | 0.1542 | 0.1077 | -0.1901 | 0.4173 | 0.2173 |
-| random_forest | 0.0 | 0.3365 | 0.1109 | 0.1591 | 0.6972 | -0.2139 | 0.4446 | 0.4475 |
-| random_forest | 1.0 | 0.2956 | 0.0984 | 0.1591 | 0.6187 | -0.2186 | 0.4446 | 0.4475 |
-| random_forest | 5.0 | 0.144 | 0.05 | 0.1593 | 0.3136 | -0.2372 | 0.4345 | 0.4475 |
+| hist_gradient_boosting | 0.0 | -0.3429 | -0.1453 | 0.1637 | -0.8877 | -0.4178 | 0.4243 | 0.7226 |
+| hist_gradient_boosting | 1.0 | -0.3742 | -0.1607 | 0.1638 | -0.9816 | -0.4377 | 0.4228 | 0.7226 |
+| hist_gradient_boosting | 5.0 | -0.4851 | -0.2198 | 0.1642 | -1.3386 | -0.5199 | 0.4125 | 0.7226 |
+| logistic_regression | 0.0 | 0.289 | 0.0996 | 0.1522 | 0.6541 | -0.1498 | 0.4525 | 0.1528 |
+| logistic_regression | 1.0 | 0.2758 | 0.0954 | 0.1522 | 0.6263 | -0.1507 | 0.4496 | 0.1528 |
+| logistic_regression | 5.0 | 0.2244 | 0.0786 | 0.1522 | 0.5164 | -0.1611 | 0.4496 | 0.1528 |
+| random_forest | 0.0 | 0.1042 | 0.0378 | 0.1508 | 0.2504 | -0.2114 | 0.4318 | 0.4228 |
+| random_forest | 1.0 | 0.0732 | 0.0268 | 0.1508 | 0.1774 | -0.2223 | 0.4318 | 0.4228 |
+| random_forest | 5.0 | -0.0425 | -0.0161 | 0.151 | -0.1067 | -0.2645 | 0.4273 | 0.4228 |
 
 ## Probability Plot
 
