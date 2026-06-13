@@ -34,3 +34,25 @@ Research project looking at short-horizon prediction, market microstructure, mar
 ## Project Roadmap
 
 See [`docs/project_plan.md`](docs/project_plan.md) for the full research and engineering plan.
+
+## Research Report
+
+The first full project report is available here:
+
+[`reports/final_research_report_v1.md`](reports/final_research_report_v1.md)
+
+This report summarises the project architecture, data pipeline, feature engineering, machine learning validation, backtesting framework, probability simulations, C++ order book, options module, limitations, and future work.
+
+## Current Status
+
+Completed modules:
+
+- Python OHLCV data pipeline
+- feature engineering
+- baseline ML model
+- probability and market-making simulations
+- C++ limit-order-book engine
+- vectorised backtester
+- walk-forward ML validation
+- options pricing and delta hedging
+- final research report v1
