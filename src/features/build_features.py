@@ -39,7 +39,11 @@ def build_features(input_path: str | Path) -> pd.DataFrame:
 
 
 if __name__ == "__main__":
-    files = list(PROCESSED_DATA_DIR.glob("*.parquet"))
+    files = [
+    file
+    for file in PROCESSED_DATA_DIR.glob("*.parquet")
+    if not file.name.startswith("features_")
+]
 
     if not files:
         raise FileNotFoundError("No processed Parquet files found")
