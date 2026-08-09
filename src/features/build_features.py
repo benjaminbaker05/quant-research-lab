@@ -31,9 +31,9 @@ def build_features(input_path: str | Path) -> pd.DataFrame:
 
     # Prediction target: will tomorrow's return be positive?
     df["future_return_1d"] = df["return_1d"].shift(-1)
-    df["target_up"] = (df["future_return_1d"] > 0).astype(int)
-
     df = df.dropna().reset_index(drop=True)
+
+    df["target_up"] = (df["future_return_1d"] > 0).astype(int)
 
     return df
 

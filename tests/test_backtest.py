@@ -79,3 +79,46 @@ def test_max_drawdown_is_negative_or_zero():
 
     assert max_drawdown <= 0
     assert max_drawdown == pytest.approx(-0.25)
+
+def test_signal_is_applied_to_same_row_future_return():
+    df = pd.DataFrame(
+        {
+            "date": pd.date_range("2024-01-01", periods=3),
+            "signal": [1, 0, -1],
+            "future_return_1d": [0.10, 0.20, 0.10],
+        }
+    )
+
+    result = run_vectorized_backtest(
+        df=df,
+        signal_column="signal",
+        cost_bps=0.0,
+    )
+
+    expected_returns = [0.10, 0.0, -0.10]
+
+    assert result.results["strategy_return"].tolist() == pytest.approx(
+        expected_returns
+    )
+
+
+def test_first_position_pays_transaction_cost():
+    df = pd.DataFrame(
+        {
+            "date": pd.date_range("2024-01-01", periods=2),
+            "signal": [1, 1],
+            "future_return_1d": [0.0, 0.0],
+        }
+    )
+
+    result = run_vectorized_backtest(
+        df=df,
+        signal_column="signal",
+        cost_bps=100.0,
+    )
+
+    # Moving from flat to long creates 1 unit of turnover.
+    # At 100 bps, the first-period transaction cost is 0.01.
+    assert result.results["turnover"].iloc[0] == pytest.approx(1.0)
+    assert result.results["transaction_cost"].iloc[0] == pytest.approx(0.01)
+    assert result.results["strategy_return"].iloc[0] == pytest.approx(-0.01)
